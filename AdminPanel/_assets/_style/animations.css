@@ -1,0 +1,82 @@
+@keyframes rotationPokeball{
+    0% {
+        -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+    
+}
+
+@keyframes expandDown{
+    0% {
+        -webkit-transform: translateY(-50%) rotate(90deg);
+            -ms-transform: translateY(-50%) rotate(90deg);
+                transform: translateY(-50%) rotate(90deg);
+    }
+    100% {
+        -webkit-transform: translateY(-50%) rotate(270deg);
+            -ms-transform: translateY(-50%) rotate(270deg);
+                transform: translateY(-50%) rotate(270deg);
+    }
+}
+
+@keyframes expandUp{
+    0% {
+        -webkit-transform: translateY(-50%) rotate(270deg);
+            -ms-transform: translateY(-50%) rotate(270deg);
+                transform: translateY(-50%) rotate(270deg);
+    }
+    100% {
+        -webkit-transform: translateY(-50%) rotate(90deg);
+            -ms-transform: translateY(-50%) rotate(90deg);
+                transform: translateY(-50%) rotate(90deg);
+    }
+}
+
+@keyframes gotMail{
+    0%{
+        -webkit-transform: translateY(0px);
+            -ms-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+    5%{
+        -webkit-transform: translateY(-7px);
+            -ms-transform: translateY(-7px);
+                transform: translateY(-7px);
+    }
+    10%{
+        -webkit-transform: translateY(0px);
+            -ms-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+    100%{
+        -webkit-transform: translateY(0px);
+            -ms-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        -webkit-transform: translate(-70%, -50%);
+            -ms-transform: translate(-70%, -50%);
+                transform: translate(-70%, -50%);
+    }
+    30%, 100%{
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+    }
+}

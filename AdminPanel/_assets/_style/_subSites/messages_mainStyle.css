@@ -1,0 +1,234 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.preLoad{
+    transition: 0;
+}
+
+div#notAvailableWrapper{
+    position: absolute;
+    width: 900px;
+    height: 250px;
+    
+    top: 30%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -30%);
+        -ms-transform: translate(-50%, -30%);
+            transform: translate(-50%, -30%);
+}
+
+div#notAvailableWrapper > span.nothingToSee{
+    position: absolute;
+    
+    font-size: 40px;
+    font-weight: 400;
+    
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    
+    margin-top: 45px;
+    color: #2A3F54;
+}
+
+div#notAvailableWrapper > span.sub{
+    position: absolute;
+    top: 30%;
+    margin-top: 30px;
+    
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    
+    color: #2A3F54;
+}
+
+div#notAvailableWrapper > div.backToHome{
+    position: absolute;
+    
+    height: 70px;
+    width: 70px;
+    
+    margin-left: 415px;
+    margin-top: 155px;
+    
+    background-image: url(../../_images/goBack.png);
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+    transition: transform 0.30s cubic-bezier(.5,-0.43,.62,1.45);
+}
+
+div#notAvailableWrapper > div.backToHome:hover{
+    cursor: pointer;
+    
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+}
+
+div#mails > span.header{
+    position: relative;
+    color: #2A3F54;
+    
+    font-size: 25px;
+    font-weight: 400;
+}
+
+div#mails > span.numberOfMails{
+    margin-left: 20px;
+}
+
+div#mails > div.mailNumber{
+    line-height: 0.7;
+}
+
+div#mails > div.mailNumber > span.subHeader{
+    position: relative;
+    color: #2A3F54;
+    
+    font-size: 14px;
+    font-weight: 300;
+}
+
+div#mails > div.mailNumber > span.showing{
+    margin-left: 20px;
+}
+
+/* Main Mail Wrapper */
+div#mails > div.mainMailWrapper{
+    position: relative;
+    background: rgba(0, 0, 0, .1);
+    
+    width: calc(100% - 250px);
+    height: calc(100% - 200px);
+    
+    margin-top: 30px;
+    margin-left: 22px;
+    
+    border-left: 2px solid #2A3F54;
+    float: left;
+}
+
+div#mails > div.mainMailWrapper > div.subjectMail{
+    height: 75px;
+    width: 90%;
+    border-bottom: 1px solid rgba(42, 63, 84, .3);
+}
+
+div#mails > div.mainMailWrapper > div.subjectMail > span.subjectOfMail{
+    position: absolute;
+    margin-top: 17px;
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+div#mails > div.mainMailWrapper > div.mailContent{
+    position: absolute;
+    width: calc(100% - 40px);
+    height: calc(100% - 115px);
+    
+    white-space: pre;
+    
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+div#mails > div.mailOptions{
+    background: rgba(0, 0, 0, .1);
+    height: calc(100% - 200px);
+    width: 170px;
+    
+    margin-top: 30px;
+    margin-left: 10px;
+    
+    float: left;
+}
+
+div#mails > div.mailOptions > div.prevMessage{
+    margin-left: 50px;
+    margin-top: 35px;
+    
+    height: 70px;
+    width: 70px;
+    
+    background-image: url(../../_images/expandVertIcon.png);
+    background-size: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    -webkit-filter: invert(60%);
+            filter: invert(60%);
+    
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+    
+    transition: all 0.20s ease-in-out;
+}
+
+div#mails > div.mailOptions > div.nextMessage{
+    margin-left: 50px;
+    
+    height: 70px;
+    width: 70px;
+    
+    background-image: url(../../_images/expandVertIcon.png);
+    background-size: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    -webkit-filter: invert(60%);
+            filter: invert(60%);
+    
+    margin-top: 20px;
+    
+    transition: all 0.20s ease-in-out;
+}
+
+div#mails > div.mailOptions > div.readMessage{
+    margin-left: 50px;
+    
+    height: 70px;
+    width: 70px;
+    
+    background-image: url(../../_images/readMessage.png);
+    background-size: 80%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    -webkit-filter: invert(60%);
+            filter: invert(60%);
+    
+    margin-top: 100px;
+    
+    transition: all 0.20s ease-in-out;
+}
+
+div#mails > div.mailOptions > div.prevMessage:hover{
+    cursor: pointer;
+    -webkit-transform: rotate(180deg) scale(1.2);
+        -ms-transform: rotate(180deg) scale(1.2);
+            transform: rotate(180deg) scale(1.2);
+}
+
+div#mails > div.mailOptions > div.nextMessage:hover{
+    cursor: pointer;
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+}
+
+div#mails > div.mailOptions > div.readMessage:hover{
+    cursor: pointer;
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+}
+/* ---- */

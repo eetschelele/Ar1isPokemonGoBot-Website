@@ -1,0 +1,873 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Work Sans';
+    font-size: 14px;
+    font-weight: 300;
+    
+    line-height: 1.7;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+div#mainPanelWrapper div.sideBar{
+    position: absolute;
+    z-index: 3;
+    height: 100vh;
+    width: 200px;
+    background: #2A3F54;
+    color: #F2FFFF;
+    
+    border-right: 2px #5C748E solid; 
+}
+
+div#mainPanelWrapper div.sideBar > div.whiteBreak{
+    margin-top: 100px;
+    width: 100%;
+    height: 27px;
+    
+    border-bottom: 1px solid darkgray;
+}
+
+/* Side bar elements */
+div#mainPanelWrapper div.sideBar > div.sideBarElements{
+    position: relative;
+    left: 50%;
+    
+    border-right: 0;
+    
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    
+    height: 40px;
+    margin-top: 10px;
+    
+    transition: background 0.30s ease-in-out;
+}
+
+div#mainPanelWrapper div.sideBar > div.sideBarElements:hover{
+    cursor: pointer;
+    background: rgba(200, 200, 200, .1);
+    border-right: 3px #00ffcc solid;
+}
+
+div#mainPanelWrapper div.sideBar > div.sideBarElements.home{
+    margin-top: 20px;
+}
+
+div#mainPanelWrapper div.sideBar > div.sideBarElements > div.icon{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    
+    margin-left: 20px;
+}
+
+div#mainPanelWrapper div.sideBar > div.sideBarElements > div.expandHome{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    margin-left: 170px;
+    
+    top: 50%;
+    -webkit-transform: translateY(-50%) rotate(90deg);
+        -ms-transform: translateY(-50%) rotate(90deg);
+            transform: translateY(-50%) rotate(90deg);
+    
+    transform-origin: center center;
+    
+    background-image: url(../_images/expandVertIcon.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div#mainPanelWrapper div.sideBar > div.sideBarElements > div.expandUsers{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    margin-left: 170px;
+    
+    top: 50%;
+    -webkit-transform: translateY(-50%) rotate(90deg);
+        -ms-transform: translateY(-50%) rotate(90deg);
+            transform: translateY(-50%) rotate(90deg);
+    
+    transform-origin: center center;
+    
+    background-image: url(../_images/expandVertIcon.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div#mainPanelWrapper div.sideBar > div.sideBarElements > div.expandForms{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    margin-left: 170px;
+    
+    top: 50%;
+    -webkit-transform: translateY(-50%) rotate(90deg);
+        -ms-transform: translateY(-50%) rotate(90deg);
+            transform: translateY(-50%) rotate(90deg);
+    
+    transform-origin: center center;
+    
+    background-image: url(../_images/expandVertIcon.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div#mainPanelWrapper div.sideBar > div.sideBarElements > span.description {
+    position: absolute;
+    
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    
+    margin-left: 55px;
+}
+
+div#mainPanelWrapper div.sideBar > .home > div.icon{
+    background-image: url(../_images/homeIcon.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div#mainPanelWrapper div.sideBar > .forms > div.icon{
+    background-image: url(../_images/formsIcon.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div#mainPanelWrapper div.sideBar > .code > div.icon{
+    background-image: url(../_images/codeIcon.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    -webkit-filter: invert(100%);
+            filter: invert(100%);
+}
+
+div#mainPanelWrapper div.sideBar > .banUsers > div.icon{
+    background-image: url(../_images/banIcon.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div#mainPanelWrapper div.sideBar > .gitHub > div.icon{
+    background-image: url(../_images/githubIcon.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    -webkit-filter: invert(100%);
+            filter: invert(100%);
+}
+
+div#mainPanelWrapper div.sideBar > .pokeLog > div.icon{
+    background-image: url(../_images/pokemonGoIcon.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+}
+/* ---- */
+
+/* Submenus */
+div#mainPanelWrapper div.sideBar > div.subMenuHome{
+    position: relative;
+    height: 0px;
+    overflow: hidden;
+    
+    box-sizing: border-box;
+    
+    margin-bottom: 5px;
+    
+    width: 100%;
+    
+    transition: all 0.70s cubic-bezier(.5,-0.43,.62,1.45);
+}
+
+div#mainPanelWrapper div.sideBar > div.subMenuHome.isIn{
+    position: relative;
+    height: 150px;
+    
+    background: rgba(0, 0, 0, .2);
+    
+    margin-bottom: 5px;
+    
+    width: 100%;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuHome > div.subItemFirst{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    
+    transition: all 0.30s ease-in-out;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuHome > div.subItemFirst:hover{
+    background: rgba(0, 0, 0, .15);
+    cursor: pointer;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuHome > div.subItemSecond:hover{
+    background: rgba(0, 0, 0, .15);
+    cursor: pointer;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuHome > div.subItemThird:hover{
+    background: rgba(0, 0, 0, .15);
+    cursor: pointer;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuHome span.explanation{
+    position: absolute;
+    margin-left: 75px;
+    color: #F2FFFF;
+    
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuHome > div.subItemFirst > div.icon{
+    position: absolute;
+    margin-left: 37px;
+    
+    width: 20px;
+    height: 20px;
+    
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    
+    background-image: url(../_images/profileIcon.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuHome > div.subItemSecond{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    
+    transition: all 0.30s ease-in-out;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuHome > div.subItemSecond > div.icon{
+    position: absolute;
+    margin-left: 37px;
+    
+    width: 20px;
+    height: 20px;
+    
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    
+    background-image: url(../_images/featureIcon.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuHome > div.subItemThird{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    
+    transition: all 0.30s ease-in-out;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuHome > div.subItemThird > div.icon{
+    position: absolute;
+    margin-left: 37px;
+    
+    width: 20px;
+    height: 20px;
+    
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    
+    background-image: url(../_images/overviewIcon.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div#mainPanelWrapper div.sideBar > div.subMenuUsers{
+    position: relative;
+    height: 0px;
+    overflow: hidden;
+    
+    box-sizing: border-box;
+    
+    margin-bottom: 5px;
+    
+    width: 100%;
+    
+    transition: all 0.70s cubic-bezier(.5,-0.43,.62,1.45);
+}
+
+div#mainPanelWrapper div.sideBar > div.subMenuUsers.isIn{
+    position: relative;
+    height: 200px;
+    
+    background: rgba(0, 0, 0, .2);
+    
+    margin-bottom: 5px;
+    
+    width: 100%;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuUsers > div.subItemFirst{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    
+    transition: all 0.30s ease-in-out;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuUsers > div.subItemFirstAdd{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    
+    transition: all 0.30s ease-in-out;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuUsers > div.subItemFirst:hover{
+    background: rgba(0, 0, 0, .15);
+    cursor: pointer;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuUsers > div.subItemFirstAdd:hover{
+    background: rgba(0, 0, 0, .15);
+    cursor: pointer;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuUsers > div.subItemSecond:hover{
+    background: rgba(0, 0, 0, .15);
+    cursor: pointer;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuUsers > div.subItemThird:hover{
+    background: rgba(0, 0, 0, .15);
+    cursor: pointer;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuUsers span.explanation{
+    position: absolute;
+    margin-left: 75px;
+    color: #F2FFFF;
+    
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuUsers > div.subItemFirst > div.icon{
+    position: absolute;
+    margin-left: 37px;
+    
+    width: 20px;
+    height: 20px;
+    
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    
+    background-image: url(../_images/profileIcon.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuUsers > div.subItemFirstAdd > div.icon{
+    position: absolute;
+    margin-left: 37px;
+    
+    width: 20px;
+    height: 20px;
+    
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    
+    background-image: url(../_images/pardonIcon.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuUsers > div.subItemSecond{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    
+    transition: all 0.30s ease-in-out;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuUsers > div.subItemSecond > div.icon{
+    position: absolute;
+    margin-left: 37px;
+    
+    width: 20px;
+    height: 20px;
+    
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    
+    background-image: url(../_images/promotionIcon.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuUsers > div.subItemThird{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    
+    transition: all 0.30s ease-in-out;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuUsers > div.subItemThird > div.icon{
+    position: absolute;
+    margin-left: 37px;
+    
+    width: 20px;
+    height: 20px;
+    
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    
+    background-image: url(../_images/invitationIcon.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div#mainPanelWrapper div.sideBar > div.subMenuForms{
+    position: relative;
+    height: 0px;
+    overflow: hidden;
+    
+    box-sizing: border-box;
+    
+    margin-bottom: 5px;
+    
+    width: 100%;
+    
+    transition: all 0.70s cubic-bezier(.5,-0.43,.62,1.45);
+}
+
+div#mainPanelWrapper div.sideBar > div.subMenuForms.isIn{
+    position: relative;
+    height: 150px;
+    
+    background: rgba(0, 0, 0, .2);
+    
+    margin-bottom: 5px;
+    
+    width: 100%;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuForms > div.subItemFirst{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    
+    transition: all 0.30s ease-in-out;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuForms > div.subItemFirst:hover{
+    background: rgba(0, 0, 0, .15);
+    cursor: pointer;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuForms > div.subItemSecond:hover{
+    background: rgba(0, 0, 0, .15);
+    cursor: pointer;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuForms > div.subItemThird:hover{
+    background: rgba(0, 0, 0, .15);
+    cursor: pointer;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuForms span.explanation{
+    position: absolute;
+    margin-left: 75px;
+    color: #F2FFFF;
+    
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuForms > div.subItemFirst > div.icon{
+    position: absolute;
+    margin-left: 37px;
+    
+    width: 20px;
+    height: 20px;
+    
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    
+    background-image: url(../_images/securityIcon.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuForms > div.subItemSecond{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    
+    transition: all 0.30s ease-in-out;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuForms > div.subItemSecond > div.icon{
+    position: absolute;
+    margin-left: 37px;
+    
+    width: 20px;
+    height: 20px;
+    
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    
+    background-image: url(../_images/wikiIcon.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuForms > div.subItemThird{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    
+    transition: all 0.30s ease-in-out;
+}
+
+div#mainPanelWrapper div.sidebar > div.subMenuForms > div.subItemThird > div.icon{
+    position: absolute;
+    margin-left: 37px;
+    
+    width: 20px;
+    height: 20px;
+    
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    
+    background-image: url(../_images/FAQIcon.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* ---- */
+
+div#mainPanelWrapper div.sideBar > div.whiteBreak > span.introText{
+    color: #ededed;
+    margin-left: 10px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+div#mainPanelWrapper div.sideBar > div.bottomSettings{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 0, 0, .2);
+    bottom: 0;
+}
+
+div#mainPanelWrapper div.sideBar > div.bottomSettings > div.settings, div#mainPanelWrapper div.sideBar > div.bottomSettings > div.logout, div#mainPanelWrapper div.sideBar > div.bottomSettings > div.messages, div#mainPanelWrapper div.sideBar > div.bottomSettings > div.legalNotice{
+    width: 50px;
+    height: 100%;
+    position: relative;
+    float: left;
+    
+    transition: all 0.30s ease-in-out;
+}
+
+div#mainPanelWrapper div.sideBar > div.bottomSettings > div.settings{
+    background-image: url('../_images/settingsIcon.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+div#mainPanelWrapper div.sideBar > div.bottomSettings > div.settings:hover{
+    cursor: pointer;
+    background: rgba(0, 0, 0, .25);
+    
+    background-image: url('../_images/settingsIcon.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+div#mainPanelWrapper div.sideBar > div.bottomSettings > div.messages{
+    background-image: url('../_images/messagesIcon.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+div#mainPanelWrapper div.sideBar > div.bottomSettings > div.messages:hover{
+    cursor: pointer;
+    background: rgba(0, 0, 0, .25);
+    
+    background-image: url('../_images/messagesIcon.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+div#mainPanelWrapper div.sideBar > div.bottomSettings > div.legalNotice{
+    background-image: url('../_images/legalNotice.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+div#mainPanelWrapper div.sideBar > div.bottomSettings > div.legalNotice:hover{
+    cursor: pointer;
+    background: rgba(0, 0, 0, .25);
+    
+    background-image: url('../_images/legalNotice.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+div#mainPanelWrapper div.sideBar > div.bottomSettings > div.logout{
+    background-image: url('../_images/logoutIcon.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+div#mainPanelWrapper div.sideBar > div.bottomSettings > div.logout:hover{
+    cursor: pointer;
+    background: rgba(0, 0, 0, .25);
+    
+    background-image: url('../_images/logoutIcon.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+div#mainPanelWrapper div.sideBar > div.bottomSettings > div.messages > div.numberOfMessages{
+    visibility: hidden;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    
+    -webkit-box-shadow: 0px 2px  10px rgba(0, 0, 0, .4);
+            box-shadow: 0px 2px  10px rgba(0, 0, 0, .4);
+    
+    background: #ff3333;
+    margin-left: 30px;
+    margin-top: -5px;
+}
+
+div#mainPanelWrapper div.sideBar > div.bottomSettings > div.messages > div.numberOfMessages > span.numberOfMessagesText{
+    position: absolute;
+    
+    color: #f7f7f7;
+    
+    margin-left: 4px;
+    margin-top: -3px;
+    
+    font-size: 12px;
+}
+
+div#mainPanelWrapper div.topBar{
+    position: absolute;
+    z-index: 2;
+    
+    width: 100%;
+    height: 70px;
+    background: #EDEDED;
+    
+    border-bottom: 2px #e6e6e6 solid;
+    
+    -webkit-box-shadow: 0px -10px 50px black;
+       -moz-box-shadow: 0px -10px 50px black;
+            box-shadow: 0px -10px 50px black;
+}
+
+div#mainPanelWrapper div.topBar > div.menuIcon{
+    position: absolute;
+    
+    width: 40px;
+    height: 40px;
+    
+    margin-left: 230px;
+    margin-top: 15px;
+    
+    background-image: url('../_images/menuIcon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+    transition: all 0.30s cubic-bezier(.5,-0.43,.62,1.45);
+}
+
+div#mainPanelWrapper div.topBar > div.menuIcon:hover{
+    cursor: pointer;
+    
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+}
+
+/* Top Menu */
+div#mainPanelWrapper div.topMenu{
+    position: absolute;
+    z-index: 1;
+    
+    -webkit-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+            transform: translateY(-30px);
+    
+    height: 100px;
+    width: 100%;
+    background: #f7f7f7;
+    border-bottom: 2px #e6e6e6 solid;
+    
+    transition: all 0.50s cubic-bezier(.3,-0.43,.62,1.45);
+}
+
+div#mainPanelWrapper div.topMenu.isIn{
+    -webkit-transform: translateY(70px);
+        -ms-transform: translateY(70px);
+            transform: translateY(70px);
+}
+
+div#mainPanelWrapper div.topMenu > span.personalInfoText{
+    position: absolute;
+    color: #2A3F54;
+    
+    margin-left: 220px;
+    margin-top: 10px;
+    
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+div#mainPanelWrapper div.topMenu > div.wrapper{
+    position: relative;
+    height: 50px;
+    width: calc(100% - 240px);
+    margin-left: 220px;
+    margin-top: 43px;
+}
+div#mainPanelWrapper div.topMenu > div.wrapper > div.funOne, div#mainPanelWrapper div.topMenu > div.wrapper > div.funTwo, div#mainPanelWrapper div.topMenu > div.wrapper > div.funThree, div#mainPanelWrapper div.topMenu > div.wrapper > div.funFour{
+    float: left;
+    position: relative;
+    height: 50px;
+    width: calc(25% - 1px);
+    border-right: 1px solid;
+}
+div#mainPanelWrapper div.topMenu > div.wrapper > div.funFour{
+    border-right: 0;
+}
+/* ---- */
+
+div#mainPanelWrapper div.sideBar > div.pokemonGoIcon{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin-top: 17px;
+    margin-left: 10px;
+    
+    background-image: url('../_images/favicon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+    -webkit-filter: invert(90%);
+            filter: invert(90%);
+    
+    animation: rotationPokeball 3s cubic-bezier(.5,-0.43,.62,1.45) infinite;
+}
+
+div#mainPanelWrapper div.sideBar > span.welcome, div#mainPanelWrapper div.sideBar > span.welcomeName{
+    position: absolute;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+div#mainPanelWrapper div.sideBar > span.welcomeName{
+    margin-left: 125px;
+}
+
+div#mainPanelWrapper div.sideBar > span.state{
+    position: absolute;
+    color: gray;
+    font-size: 13px;
+    margin-left: 70px;
+    margin-top: 37px;
+}
+
+div#mainPanelWrapper div.mainContent{
+    z-index: 0;
+    
+    overflow: scroll;
+    
+    position: absolute;
+    margin-top: 73px;
+    margin-left: 202px;
+    
+    width: calc(100% - 202px);
+    height: calc(100% - 73px);
+}

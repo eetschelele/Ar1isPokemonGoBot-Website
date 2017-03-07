@@ -1,0 +1,69 @@
+div.mainWrapper > span.header{
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+div.mainWrapper > span.explanation{
+    position: absolute;
+    
+    margin-top: 28px;
+    margin-left: 15px;
+    clear: both;
+}
+
+div.mainWrapper > div.graphWrapper{
+    margin-top: 90px;
+    height: 500px;
+    width: 100%;
+    position: relative;
+}
+
+div.mainWrapper > div.graphWrapper> canvas#chartPingToWebsite{
+    display: block;
+    margin-left: 10px;
+    position: relative;
+    float: left;
+    margin-bottom: 10px;
+}
+
+div.mainWrapper > div.graphWrapper> div.information{
+    position: relative;
+    
+    margin-left: 20px;
+    
+    height: 300px;
+    width: 450px;
+    float: left; 
+}
+
+div.mainWrapper > div.graphWrapper > div.information > span.header{
+    position: absolute;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+div.mainWrapper > div.graphWrapper > div.information > span.h2{
+    position: absolute;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 10px;
+    margin-top: 50px;
+}
+
+div.mainWrapper > div.graphWrapper > div.information > ul.information{
+    position: absolute;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 10px;
+    margin-top: 80px;
+    list-style-type: disc;
+}
+
+div.mainWrapper > div.graphWrapper > div.information > ul.information > li > span{
+    font-size: 14px;
+}

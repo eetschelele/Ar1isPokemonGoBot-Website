@@ -1,0 +1,176 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Work Sans';
+    font-weight: 300;
+    font-size: 14px;
+    
+    text-align: center;
+}
+
+div#mainLogin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    
+    background: rgba(42, 63, 84, 1);
+    color: white;
+    
+    padding: 80px 100px;
+    
+    border-radius: 10px;
+    
+    animation: fadeIn 2s forwards cubic-bezier(.3,-0.43,.62,1.45);
+}
+
+div#mainLogin > span.login{
+    font-size: 15px;
+    font-weight: 500;
+    
+    margin-bottom: 20px;
+}
+
+div.profilePicture{
+    position: absolute;
+    z-index: 1;
+    
+    width: 200px;
+    height: 200px;
+
+    margin-top: -180px;
+    
+    top: 50%;
+    left: 50%;
+    
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    
+    background-image: url(../_images/gotchaIcon.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    animation: fadeIn 2s forwards cubic-bezier(.3,-0.43,.62,1.45);
+}
+
+form.loginForm{
+    margin-top: 20px;
+    
+}
+
+span.redirection{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    
+    font-weight: 300;
+    color: gray;
+}
+
+span.failed{
+    position: absolute;
+    
+    font-size: 14px;
+    
+    top: 50%;
+    left: 50%;
+    
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    
+    font-weight: 300;
+    color: gray;
+}
+
+span.passwordText{
+    margin-left: 6px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+input[type=text], input[type=password]{
+    font-family: 'Work Sans';
+    color: gray;
+    
+    padding: 5px;
+    
+    margin-left: 10px;
+    margin-bottom: 10px;
+     
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    border:1px solid #BEBEBE;
+    
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+    outline: none;  
+    
+}
+
+input[type=text]:focus, input[type=password]:focus{
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+       -moz-box-shadow: 0 0 8px #88D5E9;
+            box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+}
+
+input[type=submit]{
+    display: inline-block;
+    height: 30px;
+    width: 150px;
+    padding: 6px 24px;
+    margin-top: 10px;
+    color: #666666;
+    background-color: #f9f9f9;
+    
+	-webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+       -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+	        box-shadow: inset 0px 1px 0px 0px #ffffff;
+    
+    -webkit-border-radius: 6px;
+       -moz-border-radius: 6px;
+	        border-radius: 6px;
+    
+	border: 1px solid #dcdcdc;
+    
+	cursor: pointer;
+	
+	font-size: 14px;
+	font-weight: bold;
+	
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #ffffff;
+    
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+            transition: all 0.30s ease-in-out;
+}
+
+input[type=submit]:hover{
+	background-color: #e9e9e9;
+}
+
+input[type=submit]:active{
+	position: relative;
+	top: 1px;
+}
